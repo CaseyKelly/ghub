@@ -1,31 +1,26 @@
-<h1>Github API Practice</h1>
-
-<p>Find info about a user</p>
-  <%= form_tag userinfo_path, method: :get do %>
-   <%= label_tag("GitHub Username") %>
-   <%= text_field_tag :username %>
-   <%= submit_tag 'Get Info' %>
-   <% end %>
-
-<p>
-<img src="<%= @user.avatar_url %>" height=200px>
-<p><b>User Login:</b> <%= @user.login %>
-<p><b>Name:</b> <%= @user.name %>
-<p><b>User ID:</b> <%= @user.id %>
-<p><b>Location:</b> <%= @user.location %>
-<p><b>Email:</b> <%= @user.email %>
-<p><b>No. of public repos:</b> <%= @user.public_repos %>
-<p><b>No. of followers:</b> <%= @user.followers %>
-<p><b>GitHub URL:</b> <a href="<%= @user.html_url %>"><%= @user.html_url %></a>
-<p><b>GitHub Birthday:</b> <%= @user.created_at.strftime("%B %-d, %Y") %>
-
-
-<h3><%= @user.name %>'s repos:</h3>
-
-<ul>
-  <% @respositories.each do |repo| %>
-  <li> <%= repo.name %> </li>
-  <% end %>
-</ul>
-
-<h3> <%= @user.name %> is located in <%= @user.location %> </h3>
+<div class="col-md-10">
+  <div class="pull-left">
+    <div class="well" style="width: 400px">
+      <img src="<%= @user.avatar_url %>" height=360px>
+      <p><h1><%= @user.name %></h1>
+      <p><b>User Login:</b> <%= @user.login %>
+      <p><b>User ID:</b> <%= @user.id %>
+      <p><b>Location:</b> <%= @user.location %>
+      <p><b>Email:</b> <%= @user.email %>
+      <p><b>No. of public repos:</b> <%= @user.public_repos %>
+      <p><b>No. of followers:</b> <%= @user.followers %>
+      <p><b>GitHub URL:</b> <a href="<%= @user.html_url %>"><%= @user.html_url %></a>
+      <p><b>GitHub Birthday:</b> <%= @user.created_at.strftime("%B %-d, %Y") %>
+      <p><h3> <%= @user.name %> is located in <%= @user.location %> </h3>
+    </div>
+  </div>
+  <div class="pull-right">
+    <blockquote><h3><%= @user.name %>'s repos:</h3>
+      <ul>
+        <% @respositories.each do |repo| %>
+          <li> <%= repo.name %> </li>
+        <% end %>
+      </ul>
+    </blockquote>
+  </div>
+</div>

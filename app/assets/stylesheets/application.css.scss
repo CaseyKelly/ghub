@@ -1,0 +1,12 @@
+// Example using 'Cerulean' bootswatch
+//
+// First import cerulean variables
+@import "bootswatch/journal/variables";
+
+// Then bootstrap itself
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// And finally bootswatch style itself
+@import "bootswatch/journal/bootswatch";
