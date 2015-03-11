@@ -1,0 +1,10 @@
+<img src="<%= @user.avatar_url %>" height=250px>
+<p><b>User Login:</b> <%= @user.login %>
+<p><b>Name:</b> <%= @user.name %>
+<p><b>User ID:</b> <%= @user.id %>
+<p><b>Location:</b> <%= @user.location %>
+<p><b>Email:</b> <%= @user.email %>
+<p><b>No. of public repos:</b> <%= @user.public_repos %>
+<p><b>No. of followers:</b> <%= @user.followers %>
+<p><b>GitHub URL:</b> <a href="<%= @user.html_url %>"><%= @user.html_url %></a>
+<p><b>GitHub Birthday:</b> <%= @user.created_at.strftime("%B %-d, %Y") %>
