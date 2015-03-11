@@ -6,7 +6,7 @@
    <%= text_field_tag :username %>
    <%= submit_tag 'Get Info' %>
    <% end %>
-   
+
 <p>
 <img src="<%= @user.avatar_url %>" height=200px>
 <p><b>User Login:</b> <%= @user.login %>
@@ -20,7 +20,7 @@
 <p><b>GitHub Birthday:</b> <%= @user.created_at.strftime("%B %-d, %Y") %>
 
 
-<h3><%= @user.name %>'s last 30 repos:</h3>
+<h3><%= @user.name %>'s repos:</h3>
 
 <ul>
   <% @respositories.each do |repo| %>
