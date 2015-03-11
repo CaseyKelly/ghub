@@ -1,26 +1,27 @@
-<div class="col-md-10">
+<div class="col-md-12">
   <div class="pull-left">
-    <div class="well" style="width: 400px">
-      <img src="<%= @user.avatar_url %>" height=360px>
-      <p><h3><%= @user.name %></h3>
-      <p><b>User Login:</b> <%= @user.login %>
-      <p><b>User ID:</b> <%= @user.id %>
-      <p><b>Location:</b> <%= @user.location %>
-      <p><b>Email:</b> <%= @user.email %>
-      <p><b>No. of public repos:</b> <%= @user.public_repos %>
-      <p><b>No. of followers:</b> <%= @user.followers %>
-      <p><b>GitHub URL:</b> <a href="<%= @user.html_url %>"><%= @user.html_url %></a>
-      <p><b>GitHub Birthday:</b> <%= @user.created_at.strftime("%B %-d, %Y") %>
+    <div class="well" style="width: 450px">
+      <img src="<%= @user.avatar_url %>" height=410px>
+      <dl class="dl-horizontal">
+        <center><h1><%= @user.name %></h1></center>
+        <dt>User Login:</dt> <dd><%= @user.login %></dd>
+        <dt>User ID:</dt> <dd><%= @user.id %></dd>
+        <dt>Location:</dt> <dd><%= @user.location %></dd>
+        <dt>Email:</dt> <dd><%= @user.email %></dd>
+        <dt>No. of public repos:</dt> <dd><%= @user.public_repos %></dd>
+        <dt>No. of followers:</dt> <dd><%= @user.followers %></dd>
+        <dt>GitHub URL:</dt> <dd><a href="<%= @user.html_url %>"><%= @user.html_url %></a></dd>
+        <dt>GitHub Birthday:</dt> <dd><%= @user.created_at.strftime("%B %-d, %Y") %></dd>
+      </dl>
     </div>
   </div>
 
-  <div class="pull-right">
-    <blockquote><h3><%= @user.name %>'s repos:</h3>
-      <ul>
-        <% @respositories.each do |repo| %>
-          <li> <%= repo.name %> </li>
+  <div class="pull-right" style="width: 500px">
+    <h3><%= @user.name %>'s Repositories:</h3>
+      <ul class="list-group">
+        <% @repositories.each do |repo| %>
+        <li class="list-group-item"> <a href="<%= repo.html_url %>"><%= repo.name %></a> </li>
         <% end %>
       </ul>
-    </blockquote>
   </div>
 </div>
