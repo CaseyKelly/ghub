@@ -1,5 +1,7 @@
 <h1>gHub</h1>
 
+[![Build Status](https://travis-ci.org/CaseyKelly/ghub.svg)](https://travis-ci.org/CaseyKelly/ghub)
+
 <h3>README</h3>
 
 * Ruby version
