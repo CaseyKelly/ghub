@@ -13,10 +13,4 @@ class WelcomeController < ApplicationController
     @repositories = @new.client.repositories(params[:username])
   end
 
-  def commits
-    @new = GithubFetcher.new
-    @user = @new.client.user(params[:username])
-    @repositories = @new.client.repositories(params[:username])
-  end
-
 end
