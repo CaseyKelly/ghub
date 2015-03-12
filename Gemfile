@@ -19,6 +19,7 @@ gem 'rails_12factor', group: :production
 # gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
