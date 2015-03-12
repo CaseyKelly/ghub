@@ -29,10 +29,11 @@
 
   <div class="col-md-4">
     <h3>Commits:</h3>
-      <ul class="list-group">
-        <% @new.client.commits("CaseyKelly/gCamp-Casey-Kelly").each do |x| %>
-        <li class="list-group-item"><a href="<%= x.as_json[3][1] %>"><%= x.as_json[1][1][2][1] %></a></li>
-        <% end %>
-      </ul>
+    <ul class="list-group">
+      <% @new.client.commits("CaseyKelly/gCamp-Casey-Kelly").each do |x| %>
+        <blockquote><a href="<%= x.as_json[3][1] %>">"<%= x.as_json[1][1][2][1] %>"</a>
+          <small><%= x.as_json[1][1][1][1][2][1].to_date.strftime("%B %-d, %Y") %></small></blockquote>
+      <% end %>
+    </ul>
   </div>
 </div>
