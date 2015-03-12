@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <div class="container">
+
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -23,6 +25,33 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#"> <%= @user.name.upcase %><span class="sr-only">(current)</span></a></li>
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">g[6] <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/show?utf8=✓&username=alexandrahanley&commit=GO">Alexandra Hanley</a></li>
+            <li><a href="/show?utf8=✓&username=andrewpjames13&commit=GO">Andrew James</a></li>
+            <li><a href="/show?utf8=✓&username=calebatwood&commit=GO">Caleb Atwood</a></li>
+            <li><a href="/show?utf8=✓&username=cwstewart&commit=GO">Cameron Stewart</a></li>
+            <li><a href="/show?utf8=✓&username=DaHarris&commit=GO">Daniel Harris</a></li>
+            <li><a href="/show?utf8=✓&username=demullane&commit=GO">Danielle Mullane</a></li>
+            <li><a href="/show?utf8=✓&username=FBH037&commit=GO">Finnegan Hewitt</a></li>
+            <li><a href="/show?utf8=✓&username=hayleyblackstock&commit=GO">Hayley Blackstock</a></li>
+            <li><a href="/show?utf8=✓&username=rjmarwil&commit=GO">Jake Marwil</a></li>
+            <li><a href="/show?utf8=✓&username=Jessica-Koch&commit=GO">Jessica Koch</a></li>
+            <li><a href="/show?utf8=✓&username=JordanCollier&commit=GO">Jordan Collier</a></li>
+            <li><a href="/show?utf8=✓&username=KennethT&commit=GO">Kenneth To</a></li>
+            <li><a href="/show?utf8=✓&username=kerryhouchinroberts&commit=GO">Kerry Roberts</a></li>
+            <li><a href="/show?utf8=✓&username=maclark999&commit=GO">Mackenzie Clarkson</a></li>
+            <li><a href="/show?utf8=✓&username=cosnochic&commit=GO">Melissa Khat</a></li>
+            <li><a href="/show?utf8=✓&username=melissalouie&commit=GO">Melissa Louie</a></li>
+            <li><a href="/show?utf8=✓&username=Ninajl&commit=GO">Nina Lisitsa</a></li>
+            <li><a href="/show?utf8=✓&username=petevliet&commit=GO">Peter Vliet</a></li>
+            <li><a href="/show?utf8=✓&username=reydelo&commit=GO">Reyna DeLoge</a></li>
+            <li><a href="/show?utf8=✓&username=ShelllKell&commit=GO">Shelby Kelly</a></li>
+            <li><a href="/show?utf8=✓&username=tyhyten&commit=GO">Ty Hyten</a></li>
+            <li><a href="/show?utf8=✓&username=ooesili&commit=GO">Wesley Merkel</a></li>
+          </ul>
+        </li>
       </ul>
         <%= form_tag show_path, method: :get, class: "navbar-form navbar-left pull-right" do %>
          GITHUB USERNAME =>
@@ -32,8 +61,6 @@
     </div>
   </div>
 </nav>
-
-<div class="container">
 
   <%= yield %>
 
