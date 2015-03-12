@@ -1,10 +1,12 @@
 <div class="col-md-12">
-  
+
   <div class="pull-left">
     <div class="well" style="width: 450px">
       <img src="<%= @user.avatar_url %>" height=410px>
       <dl class="dl-horizontal">
-        <center><h1><%= @user.name %></h1></center>
+        <div class="page-header">
+          <center><h1><%= @user.name %></h1></center>
+        </div>
         <dt>User Login:</dt> <dd><%= @user.login %></dd>
         <dt>User ID:</dt> <dd><%= @user.id %></dd>
         <dt>Location:</dt> <dd><%= @user.location %></dd>
@@ -14,7 +16,6 @@
         <dt>GitHub URL:</dt> <dd><a href="<%= @user.html_url %>"><%= @user.html_url %></a></dd>
         <dt>GitHub Birthday:</dt> <dd><%= @user.created_at.strftime("%B %-d, %Y") %></dd>
       </dl>
-      <center><h3> <%= @user.name %> is located in <%= @user.location %> </h3></center>
     </div>
   </div>
 

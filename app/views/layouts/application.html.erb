@@ -22,12 +22,12 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Casey Kelly <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/">CASEY KELLY<span class="sr-only">(current)</span></a></li>
       </ul>
-        <%= form_tag userinfo_path, method: :get, class: "navbar-form navbar-left" do %>
-         <%= label_tag("GitHub Username") %>
+        <%= form_tag userinfo_path, method: :get, class: "navbar-form navbar-left pull-right" do %>
+         GITHUB USERNAME =>
          <%= text_field_tag :username %>
-         <%= submit_tag 'Get Info' %>
+         <%= submit_tag 'GO' %>
          <% end %>
     </div>
   </div>
