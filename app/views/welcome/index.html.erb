@@ -22,7 +22,7 @@
     <h3>Repositories:</h3>
     <ul class="list-group">
       <% @repositories.each do |repo| %>
-        <li class="list-group-item"> <%= link_to repo.name, commits_path %> </li>
+      <li class="list-group-item"> <a href="<%= repo.html_url %>"><%= repo.name %></a> </li>
       <% end %>
     </ul>
   </div>
