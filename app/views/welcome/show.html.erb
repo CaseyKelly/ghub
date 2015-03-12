@@ -1,9 +1,11 @@
 <div class="col-md-12">
-  <div class="pull-left">
-    <div class="well" style="width: 450px">
-      <img src="<%= @user.avatar_url %>" height=410px>
+  <div class="col-md-5">
+    <div class="well">
+      <img src="<%= @user.avatar_url %>" height=395px>
       <dl class="dl-horizontal">
-        <center><h1><%= @user.name %></h1></center>
+        <div class="page-header">
+          <center><h1><%= @user.name %></h1></center>
+        </div>
         <dt>User Login:</dt> <dd><%= @user.login %></dd>
         <dt>User ID:</dt> <dd><%= @user.id %></dd>
         <dt>Location:</dt> <dd><%= @user.location %></dd>
@@ -16,11 +18,20 @@
     </div>
   </div>
 
-  <div class="pull-right" style="width: 500px">
-    <h3><%= @user.name %>'s Repositories:</h3>
+  <div class="col-md-3">
+    <h3>Repositories:</h3>
       <ul class="list-group">
         <% @repositories.each do |repo| %>
         <li class="list-group-item"> <a href="<%= repo.html_url %>"><%= repo.name %></a> </li>
+        <% end %>
+      </ul>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Commits:</h3>
+      <ul class="list-group">
+        <% @new.client.commits("#{@user.login}/#{@repositories.last.name}").each do |x| %>
+        <li class="list-group-item"><a href="<%= x.as_json[3][1] %>"><%= x.as_json[1][1][2][1] %></a></li>
         <% end %>
       </ul>
   </div>
